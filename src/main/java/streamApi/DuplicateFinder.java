@@ -31,7 +31,7 @@ public class DuplicateFinder {
   }
 
   private static Order order(Integer uid, Integer count) {
-    return new Order().setOrderId(count++).setUserId(uid).setItemCount(count);
+    return new Order().setOrderId(count++).setUserId(uid.toString()).setItemCount(count);
   }
 
   public static void main(String[] args) {
@@ -50,7 +50,7 @@ public class DuplicateFinder {
 
   public static class Order {
     private Integer orderId;
-    private Integer userId;
+    private String userId;
     private Integer itemCount;
 
     public Integer getOrderId() {
@@ -62,11 +62,11 @@ public class DuplicateFinder {
       return this;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
       return userId;
     }
 
-    public Order setUserId(Integer userId) {
+    public Order setUserId(String userId) {
       this.userId = userId;
       return this;
     }
