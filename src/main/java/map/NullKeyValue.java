@@ -10,6 +10,9 @@ public class NullKeyValue {
     m.put("a", 1);
     m.put("b", null);
 
+    m.remove("a");
+    System.out.println(m);
+
     // System.out.println(m.get("ABC"));
 
     //    System.out.println(m.toString());

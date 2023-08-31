@@ -3,6 +3,7 @@ package collections.deque;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Shuvradeb
@@ -17,7 +18,7 @@ public class SynchronousQueueTest {
         // Producer
         executor.submit(() -> {
             try {
-                syncQueue.put(1);
+                syncQueue.offer(1, 1, TimeUnit.SECONDS);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

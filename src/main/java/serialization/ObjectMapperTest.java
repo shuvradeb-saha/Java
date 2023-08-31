@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.time.OffsetDateTime;
+import java.util.Date;
 import java.util.Objects;
 
 public class ObjectMapperTest {
@@ -92,7 +93,19 @@ public class ObjectMapperTest {
   }
 
   public static void main(String[] args) throws JsonProcessingException {
-    ObjectMapper mapper = getObjectMapper();
+    Date d = new Date();
+    System.out.println(d.toString());
+
+    //Date d2 = new ObjectMapper().readValue("2022/03/24T04:01:09.000Z", Date.class);
+    //System.out.println(d2);
+
+    Boolean v = null;
+    System.out.println(Boolean.TRUE.equals(v) + " "+ Objects.isNull(v));
+
+
+
+
+   /* ObjectMapper mapper = getObjectMapper();
     DateTimeTest dt = new DateTimeTest();
 
     dt.setArchiveDate(OffsetDateTime.parse("2022-03-24T04:01:09.000Z"))
@@ -106,6 +119,6 @@ public class ObjectMapperTest {
     System.out.println(newDt.toString());
 
     DateTimeTest newDtTest = new DateTimeTest();
-    System.out.println("Type: " + newDt.objDate.getClass().getSimpleName());
+    System.out.println("Type: " + newDt.objDate.getClass().getSimpleName());*/
   }
 }
