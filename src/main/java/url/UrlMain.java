@@ -12,7 +12,10 @@ import java.net.UnknownHostException;
 public class UrlMain {
 
   public static void main(String[] args) throws MalformedURLException, UnknownHostException {
-    String localUrl = "http://localhost:8080/abc";
+    String s = "Shaishab/%s/%s/saha";
+    System.out.println(String.format(s, "d", "r"));
+
+    String localUrl = "http://localhost:8080/abc/?test=123&another=abc";
     String remoteUrl = "https://abc.ntb.no/test";
     String localIp = "http://127.0.0.1:8080/test";
 
@@ -30,6 +33,7 @@ public class UrlMain {
     System.out.println("<<<<  " + url.toString() + " >>>>>");
     System.out.println("Host " + url.getHost());
     System.out.println("Path " + url.getPath());
+    System.out.println("Query "+ url.getQuery());
     System.out.println("Port " + url.getPort());
     System.out.println("Default Port " + url.getDefaultPort());
     System.out.println("Protocol " + url.getProtocol());
