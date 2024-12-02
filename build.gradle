@@ -5,7 +5,7 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 16
+sourceCompatibility = 21
 
 repositories {
     mavenCentral()
@@ -23,8 +23,9 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.30' // Use the latest version
     implementation 'ch.qos.logback:logback-classic:1.2.3' // Use the latest version
 
-    compileOnly 'org.projectlombok:lombok:1.18.28'
-    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
 }
-targetCompatibility = JavaVersion.VERSION_16
+
+targetCompatibility = JavaVersion.VERSION_21
