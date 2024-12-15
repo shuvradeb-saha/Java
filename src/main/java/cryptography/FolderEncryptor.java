@@ -25,7 +25,7 @@ public class FolderEncryptor {
   public static void main(String[] args) {
     try {
       // Specify the folder path and passkey
-      String folderPath = "/home/shuvradeb/Desktop/Test_Enc";
+      String folderPath = "/home/shuvradeb/Pictures/Myself/DAMN_7_YEARS";
       String passkey = "saha";
 
       // Start encryption
